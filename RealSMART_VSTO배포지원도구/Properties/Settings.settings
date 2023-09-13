@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RealSMART_VSTO배포지원도구.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ManifestValue" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;vstav3:postActions&gt;
+  &lt;vstav3:postAction&gt;
+    &lt;vstav3:entryPoint class="VSTOInstaller.VSTOInstaller"&gt;
+      &lt;assemblyIdentity name="VSTOInstaller" version="1.2015.12.24" language="neutral" processorArchitecture="msil" /&gt;
+    &lt;/vstav3:entryPoint&gt;
+    &lt;vstav3:postActionData&gt;
+    &lt;/vstav3:postActionData&gt;
+  &lt;/vstav3:postAction&gt;
+&lt;/vstav3:postActions&gt;</Value>
+    </Setting>
+    <Setting Name="VsDevCmdPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\LaunchDevCmd.bat</Value>
+    </Setting>
+    <Setting Name="CertFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\dev\KEDPI_KMIQ_N\KEDPI_KMIQ\KMIQ_Report\KMIQ_Report_TemporaryKey.pfx</Value>
+    </Setting>
+    <Setting Name="CertFilePwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smart1807</Value>
+    </Setting>
+    <Setting Name="WorkString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cd /d {0} &amp; mage -sign "{1}.dll.manifest" -certfile "{2}" -pwd {3} &amp; cd .. &amp; cd .. &amp; mage -update "{1}.vsto" -appmanifest "Application files\{4}\{1}.dll.manifest" -certfile "{2}" -pwd {3} &amp; copy /Y {1}.vsto "Application files\{4}\"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
